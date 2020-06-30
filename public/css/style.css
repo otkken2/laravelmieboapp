@@ -1,0 +1,8 @@
+.hobby_tag{
+    background-color: grey;
+    margin: 2px;
+    padding-left:3px;
+    padding-right:3px;
+    display:inline-block;
+    color: white;
+}
