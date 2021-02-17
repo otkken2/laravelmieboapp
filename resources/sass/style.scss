@@ -1,0 +1,67 @@
+html{
+    $main-bg-color:darkgray;
+    $default-margin-bottom:5px;
+    body{
+        margin: 0;
+        header{
+            margin: 0;
+            background-color:$main-bg-color;
+            display: flex;
+            justify-content: center;
+            h1{
+                margin: auto;
+                a{
+                    color: rgb(255, 255, 255);
+                }   
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+        h2{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .form-inner-wrapper{
+                width: 485px;
+                margin: auto;
+            }
+            .form-row{
+                width:fit-content;
+                margin:auto;
+                margin-bottom: $default-margin-bottom;
+            }
+        }
+        .list{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        table{
+            border: solid 1px;
+            border-collapse: collapse;
+            th{
+                border: solid 1px;
+                border-collapse: collapse;
+            }
+            td{
+                border: solid 1px;
+                border-collapse: collapse;
+            }
+        }
+        .notice{
+            text-align: center;
+        }
+        .hobby_tag{
+            background-color: $main-bg-color;
+            margin: 2px;
+            padding-left:3px;
+            padding-right:3px;
+            display:inline-block;
+            color: white;
+        }
+    }
+}

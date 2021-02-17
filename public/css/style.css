@@ -1,8 +1,80 @@
-.hobby_tag{
-    background-color: grey;
-    margin: 2px;
-    padding-left:3px;
-    padding-right:3px;
-    display:inline-block;
-    color: white;
+html body {
+  margin: 0;
 }
+
+html body header {
+  margin: 0;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+}
+
+html body header h1 {
+  margin: auto;
+}
+
+html body header h1 a {
+  color: white;
+}
+
+html body a {
+  text-decoration: none;
+}
+
+html body h2 {
+  text-align: center;
+}
+
+html body form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+html body form .form-inner-wrapper {
+  width: 485px;
+  margin: auto;
+}
+
+html body form .form-row {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+html body .list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+html body table {
+  border: solid 1px;
+  border-collapse: collapse;
+}
+
+html body table th {
+  border: solid 1px;
+  border-collapse: collapse;
+}
+
+html body table td {
+  border: solid 1px;
+  border-collapse: collapse;
+}
+
+html body .notice {
+  text-align: center;
+}
+
+html body .hobby_tag {
+  background-color: darkgray;
+  margin: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  display: inline-block;
+  color: white;
+}
+

@@ -7,12 +7,15 @@
 @section('contents')
     <div class="list"><!-- 登録者一覧 -->
         @if(count($people) != 0)
-        <table border="1">
+        <table>
             <tr>
                 <th>名前</th>
                 <th>年齢</th>
                 <th>性別</th>
                 <th>趣味</th>
+                <th></th>
+                <th></th>
+
             </tr>
             @foreach($people as $person)
             <tr>

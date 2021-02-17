@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
+@include('head')
 <body>
-    <h1><a href="/">meiboapp</a></h1>
+    <!-- <header>
+        <h1><a href="/">meiboapp</a></h1>
+    </header> -->
+    @include('header')
     <h2>@yield('pagetitle')</h2>
-    <form action="@yield('formAction')" method="post">
+    <form  action="@yield('formAction')" method="post">
     @csrf
-        <div>
-            <label for="name">名前：</label>
-            <input type="text" name="name" value="@yield('inputNameValue')">
-        </div>
-        <div>
-            <label for="age">年齢：</label>
-            <input type="text" name="age" value="@yield('inputAgeValue')">
-        </div>
-        <div>
-            <label for="gender">性別：</label>
-            <input type="text" name="gender" value="@yield('inputGenderValue')">
-        </div>
-        @foreach($hobbies as $hobby)
-            <input type="checkbox" name="hobbies" value="{{ $hobby->id }}">{{ $hobby->name }}
-        @endforeach
-        <div>
-            <input type="submit" value="登録">
+        <div class="form-inner-wrapper">
+            <div class="form-row">
+                <label for="name">名前：</label>
+                <input type="text" name="name" value="@yield('inputNameValue')">
+            </div>
+            <div class="form-row"> 
+                <label for="age">年齢：</label>
+                <input type="text" name="age" value="@yield('inputAgeValue')">
+            </div>
+            <div class="form-row">
+                <label for="gender">性別：</label>
+                <input type="text" name="gender" value="@yield('inputGenderValue')">
+            </div>
+            <div class="form-row">
+                @foreach($hobbies as $hobby)
+                    <input type="checkbox" name="hobbies" value="{{ $hobby->id }}">{{ $hobby->name }}
+                @endforeach
+            </div>
+            <div class="form-row button">
+                <input type="submit" value="名簿に登録">
+            </div>
         </div>
     </form>
     @yield('contents')
