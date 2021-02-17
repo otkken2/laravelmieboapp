@@ -11,20 +11,26 @@
     <h2>@yield('pagetitle')</h2>
     <form action="@yield('formAction')" method="post">
     @csrf
-        <label for="name">名前：</label>
-        <input type="text" name="name" value="@yield('inputNameValue')">
-        <br>
-        <label for="age">年齢：</label>
-        <input type="text" name="age" value="@yield('inputAgeValue')">
-        <br>
-        <label for="gender">性別：</label>
-        <input type="text" name="gender" value="@yield('inputGenderValue')">
-        <br>
+        <div>
+            <label for="name">名前：</label>
+            <input type="text" name="name" value="@yield('inputNameValue')">
+        </div>
+        <div>
+            <label for="age">年齢：</label>
+            <input type="text" name="age" value="@yield('inputAgeValue')">
+        </div>
+        <div>
+            <label for="gender">性別：</label>
+            <input type="text" name="gender" value="@yield('inputGenderValue')">
+        </div>
         @foreach($hobbies as $hobby)
-            <input type="checkbox" name="hobbies[]" value="{{ $hobby->id }}">{{ $hobby->hobby }}
+            <input type="checkbox" name="hobbies" value="{{ $hobby->id }}">{{ $hobby->name }}
         @endforeach
-        <input type="submit" value="登録">
+        <div>
+            <input type="submit" value="登録">
+        </div>
     </form>
     @yield('contents')
+    
 </body>
 </html>

@@ -23,3 +23,5 @@ Route::get('/delete/{id}','MeiboController@showDeletePage');
 Route::post('/delete/{id}','MeiboController@Delete');
 
 Route::get('postSuccessed','MeiboController@postSuccessed');
+
+$router->resource('people', peopleController::class);

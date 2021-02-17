@@ -21,7 +21,7 @@
                 <td>{{ $person->gender }}</td>
                 <td>
                     @foreach($person->hobbies as $hobby)
-                        <div class="hobby_tag">{{ $hobby->hobby }}</div>
+                        <div class="hobby_tag">{{ $hobby->name }}</div>
                     @endforeach
                 </td>
                 
@@ -34,4 +34,8 @@
         <p>まだ誰も登録されていません。</p>
         @endif
     </div>
+    <!-- テストです -->
+    @foreach( $ad_htmls as $ad_html )
+    {!! $ad_html->html !!}<br>
+    @endforeach
 @endsection
